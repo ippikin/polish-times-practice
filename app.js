@@ -392,16 +392,16 @@ class PolishTimesPractice {
     this.currentMinutes = roundData.minutes;
     this.currentStyle = roundData.style;
     
+    // Re-enable inputs first
+    this.selectors.userInput.disabled = false;
+    this.selectors.checkBtn.disabled = false;
+    this.selectors.revealBtn.disabled = false;
+    
     this.selectors.userInput.value = '';
     this.selectors.userInput.focus();
     
     // Hide feedback
     this.selectors.feedbackEl.className = 'feedback hidden';
-    
-    // Re-enable inputs
-    this.selectors.userInput.disabled = false;
-    this.selectors.checkBtn.disabled = false;
-    this.selectors.revealBtn.disabled = false;
     
     setTimeout(() => {
       this.speakCurrentTime();
