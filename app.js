@@ -127,11 +127,13 @@ class PolishTimesPractice {
       this.speechRate = 1.0;
       this.saveStateToStorage();
       this.speakCurrentTime(1.0);
+      this.selectors.userInput.focus();
     });
     this.selectors.playSlowBtn.addEventListener('click', () => {
       this.speechRate = 0.55;
       this.saveStateToStorage();
       this.speakCurrentTime(0.55);
+      this.selectors.userInput.focus();
     });
     
     // Check answer
